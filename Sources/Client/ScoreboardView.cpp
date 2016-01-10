@@ -221,6 +221,8 @@ namespace spades {
 				return score > ent.score;
 			}
 		};
+
+		extern int palette[32][3];
 		
 		void ScoreboardView::DrawPlayers(int team, float left, float top,
 										 float width, float height){
@@ -257,7 +259,6 @@ namespace spades {
 			
 			int row = 0, col = 0;
 			float colWidth = (float)width / (float)cols;
-			extern int palette[32][3];
 			std::string colormode = cg_Minimap_Player_Color;
 			for(int i = 0; i < numPlayers; i++){
 				ScoreboardEntry& ent = entries[i];
